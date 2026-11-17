@@ -1,0 +1,70 @@
+:root {
+  --preto: #0f0f0f;
+  --grafite: #1a1a1a;
+  --verde: #7ed321;
+  --verde-escuro: #3a4a1f;
+  --branco: #ffffff;
+  --cinza: #a8a8a8;
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.por-que {
+ background: #0f0f0f;
+ color: #fff;
+ padding: 60px 20px;
+ text-align: center; }
+.por-que h2 span { color: #7ed321; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+.card {
+ background: #1a1a1a; border: 1px solid #3a4a1f; border-radius: 16px; padding: 30px 20px; 
+}
+.card h3 { text-transform: uppercase; }
+.icone { font-size: 32px; }
+
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; }
+}
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--branco);
+  background-color: var(--preto);
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 30px 20px;
+  border: 1px solid var(--verde-escuro);
+  border-radius: 16px;
+  background-color: var(--grafite);
+  box-shadow: var(--sombra);
+}
+
+button {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 999px;
+  background-color: var(--verde);
+  color: var(--preto);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover { background-color: var(--branco); }
+button:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
