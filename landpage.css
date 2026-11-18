@@ -441,3 +441,9 @@ section[id] {
   margin: 0 auto 28px;
   color: var(--cinza);
 }
+.rodape-grade{
+  display: grid;
+  repeat: (auto-fit, minmax(240px, 1fr));
+  border-top: 1px solid var(--verde-escuro);
+  background-color: var(--grafite);
+}

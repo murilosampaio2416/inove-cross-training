@@ -290,22 +290,37 @@
       </div>
     </section>
   </main>
+  <!-- Cole depois do </main>, no lugar do rodapé antigo -->
   <footer class="rodape" id="contato">
-    <div class="container rodape-grade">
-      <div>
-        <p class="logo">INOVE <span>Cross Training</span></p>
+    <div class="container rodape-conteudo">
+      <div class="rodape-marca">
+        <a class="logo" href="#inicio">INOVE <span>Cross Training</span></a>
         <p>Treino em turma pequena no Centro de Joinville.</p>
       </div>
-      <div>
-        <h3>Contato</h3><a href="LINK_WHATSAPP">WhatsApp</a><a
-          href="https://instagram.com/inovecrosstraining">Instagram</a>
-      </div>
-      <div>
-        <h3>Onde estamos</h3>
-        <p>ENDEREÇO</p><a href="https://www.google.com/maps/search/?api=1&query=Inove+CrossTraining+Rua+9+de+Mar%C3%A7o+870+Centro+Joinville+SC">Ver no mapa</a>
-      </div>
+
+      <nav class="rodape-links" aria-label="Contato e redes sociais">
+        <!-- WhatsApp: use o mesmo link dos botoes da pagina -->
+        <a href="https://wa.me/55DDNUMERO?text=Oi!%20Quero%20agendar%20minha%20aula%20experimental%20na%20INOVE"
+          target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>
+        </a>
+        <a href="https://instagram.com/inovecrosstraining" target="_blank" rel="noopener" aria-label="Instagram"
+          title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+        </a>
+        <!-- Spotify: cole o link da playlist que esta no Linktree deles -->
+        <a href="LINK_SPOTIFY" target="_blank" rel="noopener" aria-label="Playlist no Spotify" title="Playlist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
+        </a>
+        <!-- Mapa: cole o link do Google Maps da INOVE -->
+        <a href="LINK_MAPS" target="_blank" rel="noopener" aria-label="Ver no mapa" title="Ver no mapa">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+        </a>
+      </nav>
     </div>
-    <p class="rodape-fim">© 2026 INOVE Cross Training</p>
+
+    <!-- troque ENDERECO pelo endereco completo da INOVE -->
+    <p class="rodape-fim">ENDEREÇO · © 2026 INOVE Cross Training</p>
   </footer>
 
 </body>
