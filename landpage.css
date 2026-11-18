@@ -441,9 +441,72 @@ section[id] {
   margin: 0 auto 28px;
   color: var(--cinza);
 }
-.rodape-grade{
-  display: grid;
-  repeat: (auto-fit, minmax(240px, 1fr));
-  border-top: 1px solid var(--verde-escuro);
+/* ---------- Rodapé ---------- */
+/* Apague o bloco ".rodape-grade { ... }" e qualquer outra regra de rodapé antiga, e cole isto no lugar */
+
+.rodape {
   background-color: var(--grafite);
+  border-top: 1px solid var(--verde-escuro);
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
+.rodape-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.rodape-marca .logo { font-size: 1.3rem; }
+.rodape-marca p { margin: 2px 0 0; }
+
+/* ícones redondos de contato e redes sociais */
+.rodape-links { display: flex; gap: 12px; }
+
+.rodape-links a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--verde-escuro);
+  border-radius: 50%;
+  color: var(--verde);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.rodape-links a:hover {
+  background-color: var(--verde);
+  border-color: var(--verde);
+  color: var(--preto);
+}
+
+.rodape-links svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* linha final com endereço e ano */
+.rodape-fim {
+  margin: 0;
+  padding: 12px 20px;
+  border-top: 1px solid #262626;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .rodape-conteudo { flex-direction: column; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rodape-links a { transition: none; }
 }
