@@ -1,57 +1,313 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="landpage.css">
   <title>INOVE Cross Training | Joinville</title>
+  <meta name="description" content="Cross training no Centro de Joinville. Agende sua aula experimental.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="landpage.css">
 </head>
+
 <body>
 
-  <header>
-    <h1 class="titulo">Inove Cross Training</h1>
-    <p>Uma frase explicando a proposta.</p>
-    <a href="#">Agendar aula experimental</a>
+  <!-- TROQUE 55DDNUMERO pelo WhatsApp da INOVE (so digitos, ex.: 5547999999999) -->
+
+  <header class="topo">
+    <div class="container barra">
+      <a class="logo" href="#inicio">INOVE <span>Cross Training</span></a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#por-que">Por que nós</a>
+        <a href="#grade-horario">Horários</a>
+      </nav>
+      <a class="botao botao-menu"
+        href="https://wa.me/55DDNUMERO?text=Oi!%20Quero%20agendar%20minha%20aula%20experimental%20na%20INOVE"
+        target="_blank" rel="noopener">Agendar</a>
+    </div>
   </header>
 
-  <section class="por-que">
-  <h2>Por que escolher a <span>INOVE</span>?</h2>
-  <p class="sub">Treino de verdade, no seu ritmo.</p>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-conteudo">
+        <h1>Cross training no Centro de Joinville</h1>
+        <p class="hero-texto">Treinos que cabem na sua rotina, com professores que acompanham cada aluno de perto.</p>
+        <!-- confirmar com o dono se a aula experimental e gratuita -->
+        <a class="botao"
+          href="https://wa.me/55DDNUMERO?text=Oi!%20Quero%20agendar%20minha%20aula%20experimental%20na%20INOVE"
+          target="_blank" rel="noopener">Agendar aula experimental</a>
+        <p class="hero-preco">Mensalidade de R$ 147,50</p>
+      </div>
+    </section>
 
-  <div class="cards">
-    <div class="card">
-      <div class="icone">👥</div>
-      <h3>Turma pequena</h3>
-      <p>O professor corrige seu movimento e ajusta o treino pra você.</p>
-    </div>
-    <div class="card">
-      <div class="icone">⚡</div>
-      <h3>Flash Training: 30 minutos que valem</h3>
-      <p>Sem tempo? As aulas Flash duram só 30 minutos e cabem no seu intervalo ou antes de começar o dia</p>
-    </div>
-    <div class="card">
-      <div class="icone">🧘‍♀️</div>
-      <h3>Treino que respeita o seu corpo</h3>
-      <p>Cada corpo é diferente, e o treino também precisa ser. Na INOVE a intensidade é pensada para o seu momento, com atenção especial ao treino feminino.</p>
-    </div>
-    <div class="card">
-      <div class="icone">📅</div>
-      <h3>Horários pra sua rotina</h3>
-      <p>Aulas de manhã cedo, na hora do almoço e no fim do dia</p>
-    </div>
-    <div class="card">
-      <div class="icone">🎵</div>
-      <h3>Energia lá em cima</h3>
-      <p>Ambiente acolhedor e música boa. Dá uma olhada na nossa playlist e sinta o clima antes de vir.</p>
-    </div>
-    <div class="card">
-      <div class="icone">🏋️</div>
-      <h3>Treino em circuito</h3>
-      <p>Espaço com boa opção para circuito de cross training e funcional de alta intensidade, voltado a quem quer emagrecer.</p>
-    </div>
+    <section class="por-que" id="por-que">
+      <div class="container">
+        <h2>Por que escolher a INOVE?</h2>
+        <p class="sub">Treino de verdade, no seu ritmo.</p>
 
-  </div>
-</section>
+        <div class="cards">
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>Turma pequena</h3>
+            <p>O professor corrige seu movimento e ajusta o treino pra você.</p>
+          </div>
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+              </svg>
+            </div>
+            <h3>Flash Training: 30 minutos que valem</h3>
+            <!-- confirmar dias e horarios atuais -->
+            <p>Sem tempo? As aulas Flash duram só 30 minutos e cabem no seu intervalo ou antes de começar o dia.</p>
+          </div>
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+              </svg>
+            </div>
+            <h3>Treino que respeita o seu corpo</h3>
+            <p>Cada corpo é diferente, e o treino também precisa ser. Na INOVE a intensidade é pensada para o seu
+              momento,
+              com atenção especial ao treino feminino.</p>
+          </div>
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+            </div>
+            <h3>Horários pra sua rotina</h3>
+            <!-- confirmar grade atual -->
+            <p>Aulas de manhã cedo, na hora do almoço e no fim do dia.</p>
+          </div>
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+              </svg>
+            </div>
+            <h3>Energia lá em cima</h3>
+            <p>Ambiente acolhedor e música boa. Dá uma olhada na nossa playlist e sinta o clima antes de vir.</p>
+          </div>
+          <div class="card">
+            <div class="icone">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 6.5v11M17.5 6.5v11M3.5 9v6M20.5 9v6M6.5 12h11" />
+              </svg>
+            </div>
+            <h3>Treino em circuito</h3>
+            <p>Espaço com boa opção para circuito de cross training e funcional de alta intensidade, voltado a quem quer
+              emagrecer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grade-horario" id="grade-horario">
+      <div class="container">
+        <h2 class="titulo-horario">Grade de horários</h2>
+        <p class="sub">Escolha o horário que cabe na sua rotina.</p>
+
+        <!-- DADOS DE EXEMPLO: troque pela grade atual confirmada com o dono da INOVE -->
+        <div class="tabela-rolagem">
+          <table class="grade">
+            <thead>
+              <tr>
+                <th scope="col" class="canto"><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                  </svg></th>
+                <th scope="col">Segunda</th>
+                <th scope="col">Terça</th>
+                <th scope="col">Quarta</th>
+                <th scope="col">Quinta</th>
+                <th scope="col">Sexta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">06:00</th>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">06:00 - 07:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">06:00 - 07:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">06:00 - 07:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">07:00</th>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Flash Training</p>
+                      <p class="aula-hora">07:00 - 07:30</p>
+                    </div><span class="tag tag-flash">Flash</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Flash Training</p>
+                      <p class="aula-hora">07:00 - 07:30</p>
+                    </div><span class="tag tag-flash">Flash</span>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">12:30</th>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">12:30 - 13:30</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">12:30 - 13:30</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">12:30 - 13:30</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">18:00</th>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Flash Training</p>
+                      <p class="aula-hora">18:00 - 18:30</p>
+                    </div><span class="tag tag-flash">Flash</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Flash Training</p>
+                      <p class="aula-hora">18:00 - 18:30</p>
+                    </div><span class="tag tag-flash">Flash</span>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">19:00</th>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">19:00 - 20:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">19:00 - 20:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="aula">
+                    <div>
+                      <p class="aula-nome">Cross Training</p>
+                      <p class="aula-hora">19:00 - 20:00</p>
+                    </div><span class="tag tag-cross">Cross</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="wellhub">
+      <div class="container">
+        <h2 class="titulo-wellhub">Aluno Wellhub?</h2>
+        <p class="texto-wellhub">Você também pode treinar na INOVE pelo seu plano. Veja nosso perfil e as avaliações dos
+          alunos.</p>
+        <a class="botao" href="https://wellhub.com/pt-br/search/partners/inove-crosstraining-centro/" target="_blank"
+          rel="noopener">Ver a INOVE no Wellhub</a>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape" id="contato">
+    <div class="container rodape-grade">
+      <div>
+        <p class="logo">INOVE <span>Cross Training</span></p>
+        <p>Treino em turma pequena no Centro de Joinville.</p>
+      </div>
+      <div>
+        <h3>Contato</h3><a href="LINK_WHATSAPP">WhatsApp</a><a
+          href="https://instagram.com/inovecrosstraining">Instagram</a>
+      </div>
+      <div>
+        <h3>Onde estamos</h3>
+        <p>ENDEREÇO</p><a href="https://www.google.com/maps/search/?api=1&query=Inove+CrossTraining+Rua+9+de+Mar%C3%A7o+870+Centro+Joinville+SC">Ver no mapa</a>
+      </div>
+    </div>
+    <p class="rodape-fim">© 2026 INOVE Cross Training</p>
+  </footer>
 
 </body>
+
 </html>

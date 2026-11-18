@@ -4,43 +4,189 @@
   --verde: #7ed321;
   --verde-escuro: #3a4a1f;
   --branco: #ffffff;
-  --cinza: #a8a8a8;
+  --cinza: #b5b5b5;
   --sombra: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --fonte-titulo: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --fonte-texto: "Barlow", "Segoe UI", Arial, sans-serif;
 }
-.por-que {
- background: #0f0f0f;
- color: #fff;
- padding: 60px 20px;
- text-align: center; }
-.por-que h2 span { color: #7ed321; }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 40px auto 0;
+* {
+  box-sizing: border-box;
 }
-.card {
- background: #1a1a1a; border: 1px solid #3a4a1f; border-radius: 16px; padding: 30px 20px; 
-}
-.card h3 { text-transform: uppercase; }
-.icone { font-size: 32px; }
 
-@media (max-width: 800px) {
-  .cards { grid-template-columns: 1fr; }
+html {
+  scroll-behavior: smooth;
 }
-* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: var(--fonte-texto);
   line-height: 1.5;
   color: var(--branco);
   background-color: var(--preto);
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 24px 20px; }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Menu ---------- */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(15, 15, 15, 0.92);
+  border-bottom: 1px solid var(--verde-escuro);
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.logo span {
+  font-weight: 600;
+  color: var(--verde);
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  margin-left: auto;
+}
+
+.menu a {
+  color: var(--cinza);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--branco);
+}
+
+/* ---------- Botão ---------- */
+.botao {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background-color: var(--verde);
+  color: var(--preto);
+  font-family: var(--fonte-titulo);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.botao:hover {
+  background-color: var(--branco);
+}
+
+.botao-menu {
+  padding: 8px 20px;
+  font-size: 1rem;
+}
+
+a:focus-visible,
+.botao:focus-visible {
+  outline: 3px solid var(--verde);
+  outline-offset: 3px;
+}
+
+/* ---------- Hero ---------- */
+section[id] {
+  scroll-margin-top: 64px;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  background:
+    radial-gradient(ellipse at 85% 90%, rgba(126, 211, 33, 0.22), transparent 55%),
+    var(--preto);
+}
+
+/* triângulo do logo da INOVE, bem discreto ao fundo */
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -4%;
+  bottom: -12%;
+  width: min(560px, 70vw);
+  aspect-ratio: 1;
+  background: var(--verde);
+  opacity: 0.07;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  max-width: 14ch;
+  margin: 0 0 20px;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.hero-texto {
+  max-width: 48ch;
+  margin: 0 0 32px;
+  font-size: 1.2rem;
+  color: var(--cinza);
+}
+
+.hero-preco {
+  margin: 16px 0 0;
+  color: var(--cinza);
+}
+
+/* ---------- Por que escolher ---------- */
+.por-que {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--preto);
+}
+
+.por-que h2 {
+  margin: 0 0 8px;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sub {
+  margin: 0 0 40px;
+  color: var(--cinza);
+}
 
 .cards {
   display: grid;
@@ -49,22 +195,249 @@ body {
 }
 
 .card {
+  position: relative;
   padding: 30px 20px;
   border: 1px solid var(--verde-escuro);
   border-radius: 16px;
   background-color: var(--grafite);
   box-shadow: var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-button {
-  padding: 12px 24px;
-  border: 0;
-  border-radius: 999px;
+.card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  border-color: var(--verde);
+  box-shadow: 0 10px 30px rgba(126, 211, 33, 0.25);
+}
+
+
+.icone {
+  color: var(--verde);
+}
+
+.icone svg,
+.canto svg {
+  fill: none;
+  stroke: currentColor;
+  /* o traço usa a cor do "color" */
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icone svg {
+  width: 44px;
+  height: 44px;
+}
+
+.canto svg {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+.card h3 {
+  margin: 12px 0 8px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 0;
+  color: var(--cinza);
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+
+  .barra {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding: 56px 0;
+  }
+
+  .por-que {
+    padding: 56px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .card,
+  .botao {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Grade de horários ---------- */
+/* Apague tudo do seu landpage.css a partir de "table {" e cole este arquivo no lugar */
+
+.grade-horario {
+  padding: 80px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(126, 211, 33, 0.14), transparent 60%),
+    var(--preto);
+}
+
+.titulo-horario {
+  margin: 0 0 8px;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* no celular a tabela rola para o lado em vez de espremer */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+
+.grade {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.grade th,
+.grade td {
+  padding: 0;
+  border: 1px solid #262626;
+}
+
+/* cabeçalho com os dias */
+.garade thed th {
+  padding: 18px 8px;
+  background-color: var(--grafite);
+  font-family: var(--fonte-titulo);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* canto com o ícone, em verde como o botão */
+.grade thead .canto {
+  width: 90px;
   background-color: var(--verde);
   color: var(--preto);
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
 }
-button:hover { background-color: var(--branco); }
-button:focus-visible { outline: 3px solid var(--verde); outline-offset: 2px; }
+
+/* coluna dos horários */
+.grade tbody th {
+  width: 90px;
+  background-color: var(--grafite);
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+}
+
+.grade td {
+  height: 110px;
+  background-color: rgba(26, 26, 26, 0.5);
+}
+
+/* cada aula dentro da célula */
+.aula {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  padding-top: 14px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aula:hover {
+  z-index: 2;
+  transform: scale(1.06);
+  background-color: var(--grafite);
+  box-shadow: 0 10px 30px rgba(126, 211, 33, 0.25);
+  outline: 1px solid var(--verde);
+}
+
+.aula-nome {
+  margin: 0;
+  padding: 0 8px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.aula-hora {
+  margin: 4px 0 10px;
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+
+/* faixa colorida na base da célula */
+.tag {
+  display: block;
+  padding: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--preto);
+}
+
+.tag-cross {
+  background-color: var(--verde);
+}
+
+.tag-flash {
+  background-color: var(--branco);
+}
+
+@media (max-width: 600px) {
+  .grade-horario {
+    padding: 56px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aula {
+    transition: none;
+  }
+
+  .aula:hover {
+    transform: none;
+  }
+}
+
+.wellhub {
+  text-align: center;
+  padding: 4 px;
+  border-color: var(--grafite);
+}
+
+.wellhub {
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--grafite);
+  border-top: 1px solid var(--verde-escuro);
+}
+
+.texto-wellhub {
+  max-width: 52ch;
+  margin: 0 auto 28px;
+  color: var(--cinza);
+}
